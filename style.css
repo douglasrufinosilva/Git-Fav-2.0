@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-color: #000;
+  --table-hd-color: #092D38;
+  --bg-odd-color: rgba(6, 22, 27, 0.50);
+  --bg-even-color: #06181C;
+  --btn-remove-color: #F75A68;
+  --btn-favorite-color: #065E7C;
+  --text-color: #E1E1E6;
+}
+
+html, body, input {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+#app {
+  max-width: 1120px;
+  margin: 11.5rem auto 0;
+  padding: 3rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  
+  margin-bottom: 8.7rem;
+}
+
+.search {
+  display: flex;
+  gap: .8rem;
+}
+
+.search input {
+  width: 46.2rem;
+  border-radius: .5rem;
+  background: var(--bg-even-color);
+  border: none;
+  padding: 1.6rem;
+
+  margin-left: 2rem;
+
+  color: white;
+}
+
+.favorite-btn {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  
+  border: none;
+  border-radius: .5rem;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .8rem;
+  
+  background: var(--btn-favorite-color);
+  color: #fff;
+  padding: 1.2rem 3.2rem;
+  
+  cursor: pointer;
+  transition: background .3s;
+}
+
+.favorite-btn:hover {
+  background: #198bb1;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th {
+  background: var(--table-hd-color);
+  text-align: start;
+  
+  padding: 1.6rem 4rem;
+}
+
+td.user img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+table th:last-child {
+  border-top-right-radius: 1rem;
+}
+
+table th:first-child {
+  border-top-left-radius: 1rem;
+}
+
+table tr {
+  background: var(--bg-odd-color);
+  text-align: start;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+
+  padding: 2.4rem 4rem;
+  gap: 1.6rem;
+}
+
+.user a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.user a span {
+  font-weight: 700;
+  line-height: 160%;
+}
+
+.user a p {
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+table td {
+  padding: 0 4rem;
+}
+
+table tr:nth-child(even) {
+  background: var(--bg-even-color);
+}
+
+.remove {
+  background: transparent;
+  color: var(--btn-remove-color);
+  border: none;
+  outline: none;
+
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 160%;
+
+  cursor: pointer;
+}
+
+.empty-table.hide-empty {
+  display: none;
+}
+
+.empty-table td {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15rem;
+
+  gap: 6rem;
+
+  color: #4E5455;
+}
